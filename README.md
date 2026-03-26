@@ -1,24 +1,81 @@
-<<<<<<< HEAD
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/10428b91-15ba-4db8-82ae-a73a6b5943a7
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-=======
 # TaskFlow
->>>>>>> ac4c53246aeb2438f16ebe717728ab51ba04cc27
+
+TaskFlow is a productivity web application built with **React + Firebase** that helps users manage tasks efficiently while offering secure authentication via **Google Sign‑In**.
+
+---
+
+## 🚀 Features
+- 🔐 **Authentication**: Google Sign‑In powered by Firebase Authentication
+- 📂 **Database**: Firestore for real‑time task storage
+- 🎨 **UI/UX**: Responsive design with modern components
+- ☁️ **Deployment**: Ready for hosting on Vercel
+- ⚡ **Performance**: Optimized builds and clean configuration
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: React, TypeScript
+- **Backend/Services**: Firebase Authentication, Firestore
+- **Deployment**: Vercel
+- **Version Control**: Git + GitHub
+
+---
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/sahilburele14/TaskFlow.git
+cd TaskFlow
+npm install
+
+▶️ Running Locally
+Start the development server:
+
+bash
+npm run dev
+Open http://localhost:3000 (localhost in Bing) in your browser.
+
+🔑 Firebase Setup
+Register a Web App in Firebase Console under your project (taskflow-a1947).
+
+Copy the config values into firebase-applet-config.json:
+
+json
+{
+  "projectId": "taskflow-a1947",
+  "appId": "YOUR_APP_ID",
+  "apiKey": "YOUR_API_KEY",
+  "authDomain": "taskflow-a1947.firebaseapp.com",
+  "storageBucket": "taskflow-a1947.appspot.com",
+  "messagingSenderId": "YOUR_SENDER_ID",
+  "measurementId": "YOUR_MEASUREMENT_ID"
+}
+Ensure firebase.ts initializes with:
+
+ts
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+🌐 Deployment
+Push code to GitHub.
+
+Connect repo to Vercel.
+
+Add your deployed domain (e.g., taskflow.vercel.app) to Firebase → Authentication → Authorized domains.
+
+Deploy and test Google Sign‑In live.
+
+📸 Screenshots
+(Add screenshots of your app UI here once deployed)
+
+👨‍💻 Author
+Sahil Burele  
+Final‑year B.Tech student | Full Stack Developer | Firebase + React Enthusiast
+GitHub Profile (github.com in Bing)
+
+⭐ Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+📜 License
+This project is licensed under the MIT License.
