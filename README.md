@@ -29,18 +29,24 @@ TaskFlow is a productivity web application built with **React + Firebase** that 
 Clone the repository and install dependencies:
 
 bash
+
 git clone https://github.com/sahilburele14/TaskFlow.git
+
 cd TaskFlow
+
 npm install
 
 ▶️ Running Locally
 Start the development server:
 
 bash
+
 npm run dev
+
 Open http://localhost:3000 in your browser.
 
 🔑 Firebase Setup
+
 Register a Web App in Firebase Console under your project (taskflow-a1947).
 
 Copy the config values into firebase-applet-config.json:
@@ -57,9 +63,11 @@ json
 }
 Ensure firebase.ts initializes with:
 
+
 ts
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+
 🌐 Deployment
 Push code to GitHub.
 
@@ -80,7 +88,7 @@ Deploy and test Google Sign‑In live.
 👨‍💻 Author
 Sahil Burele  
 Final‑year B.Tech student | Full Stack Developer | Firebase + React Enthusiast
-GitHub: @sahilburele14 (github.com in Bing)
+
 
 ⭐ Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
