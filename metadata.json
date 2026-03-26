@@ -1,0 +1,5 @@
+{
+  "name": "TaskFlow",
+  "description": "A polished task management application with blocking dependencies, drafts, and debounced search.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "A task in the TaskFlow application.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the task."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the task."
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The due date of the task in ISO format."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["To-Do", "In Progress", "Done"],
+          "description": "The current status of the task."
+        },
+        "blockedBy": {
+          "type": "string",
+          "description": "The ID of another task that blocks this one."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the task was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the task was last updated."
+        },
+        "userId": {
+          "type": "string",
+          "description": "The ID of the user who owns the task."
+        },
+        "order": {
+          "type": "number",
+          "description": "The order of the task in the list."
+        }
+      },
+      "required": ["title", "description", "dueDate", "status", "createdAt", "updatedAt", "userId"]
+    }
+  },
+  "firestore": {
+    "/tasks/{taskId}": {
+      "schema": {
+        "$ref": "#/entities/Task"
+      },
+      "description": "A collection of tasks belonging to users."
+    }
+  }
+}
